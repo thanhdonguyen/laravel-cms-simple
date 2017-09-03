@@ -1,6 +1,7 @@
 #Laravel 5.4
 
 Create .env file
+<br>
 "APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=base64:gPI+46gbM6CP2BGD6+zUTHFOgwYIVkXxkYHNfMO5n6s=
@@ -15,4 +16,5 @@ DB_DATABASE=simplecms
 DB_USERNAME=root
 DB_PASSWORD=
 "
+<br>
 coppy .htaccess from folder public to root directory
