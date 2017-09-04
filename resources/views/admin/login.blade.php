@@ -41,6 +41,7 @@
         <input type="text" id="txtUsername" name="txtUsername" class="form-control" placeholder="User name" value="{!! old('txtUsername') !!}" >
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="txtPassword" name="txtPassword" class="form-control" placeholder="Password">
+        <input type="checkbox" id="remember" name="remember"> Remember me
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
 

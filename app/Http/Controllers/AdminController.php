@@ -19,7 +19,13 @@ class AdminController extends Controller
         }
     }
     public function postLoginAdmin(LoginRequest $request){
-		if(Auth::attempt(['name'=>$request->txtUsername,'password'=>$request->txtPassword])){
+        $remember = $request->input('remember');
+        $auth = Auth::attempt([
+            'name'=>$request->txtUsername,
+            'password'=>$request->txtPassword
+            ],$remember);
+        // echo $remember;die();
+		if($auth){
 			return redirect('admin/news/list')->with('message','Wellcom '.$request->txtUsername);
 		}
 		else

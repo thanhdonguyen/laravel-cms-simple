@@ -37,17 +37,9 @@
             <td><a href="{{ URL::route('admin.news.getEdit',$list['id']) }}">
        <input type="hidden" name="_token" value="{!! csrf_token() !!}">{!! $list['title'] !!}</a></td>
             <td><a href="{{ URL::route('admin.news.getEdit',$list['id']) }}">Edit</a></td>
-            <td><a onclick="confirmDelete('Are you sure you want to delete ?')" href="{{ URL::route('admin.news.getDelete',$list['id']) }}">Delete</a></td>
+            <td><a onclick="return confirmDelete('Are you sure you want to delete ?')" href="{{ URL::route('admin.news.getDelete',$list['id']) }}">Delete</a></td>
           </tr>
         @endforeach
         </tbody>
       </table>
-      <script>
-        function confirmDelete (msg){
-          if(window.confirm(msg)){
-            return true;
-          }
-          return false;
-        }
-      </script>
 @endsection
